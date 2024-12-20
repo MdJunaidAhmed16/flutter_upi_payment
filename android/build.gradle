@@ -22,6 +22,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace 'com.example.flutter_upi_payment'
     compileSdkVersion 34
 
     defaultConfig {
