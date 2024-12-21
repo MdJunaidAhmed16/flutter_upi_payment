@@ -9,8 +9,21 @@
     <!-- Optional but recommended for better UPI app detection -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" 
         android:maxSdkVersion="32" />
+
+    <!-- Add queries for UPI apps - Required for Android 11 and above -->
+    <queries>
+        <!-- For UPI apps -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="upi" />
+        </intent>
+        <!-- For better UPI app detection -->
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+    </queries>
     
     <application>
-        <!-- Note: Removed the activity declaration since it's a plugin -->
+        <!-- No activity needed for plugin -->
     </application>
 </manifest>
